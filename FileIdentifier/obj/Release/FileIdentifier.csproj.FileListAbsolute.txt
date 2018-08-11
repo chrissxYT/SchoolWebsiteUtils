@@ -1,0 +1,7 @@
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.exe.config
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.exe
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.pdb
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.csprojAssemblyReference.cache
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.exe
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.pdb

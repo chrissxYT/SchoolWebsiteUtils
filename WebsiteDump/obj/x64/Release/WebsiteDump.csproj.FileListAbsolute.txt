@@ -1,0 +1,7 @@
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.exe.config
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.exe
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.pdb
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.csproj.CoreCompileInputs.cache
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.exe
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.pdb
+C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.csprojAssemblyReference.cache
