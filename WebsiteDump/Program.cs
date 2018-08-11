@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Http;
-using System.Threading;
 
 namespace WebsiteDump
 {
@@ -22,8 +20,8 @@ namespace WebsiteDump
             GC.Collect();
             foreach (id_site s in known_sites)
             {
-                File.WriteAllBytes(s.ids.First() + ".data", s.bytes);
-                File.WriteAllLines(s.ids.First() + ".ids", s.ids.to_string_array());
+                File.WriteAllBytes(s.ids[0] + ".dat", s.bytes);
+                File.WriteAllBytes(s.ids[0] + ".ids", s.ids.to_byte_array());
             }
         }
 
@@ -37,14 +35,37 @@ namespace WebsiteDump
             return s;
         }
 
-        static void check(int num)
+        static byte[] to_byte_array(this List<short> l)
+        {
+            if(BitConverter.IsLittleEndian)
+            {
+                byte[] b = new byte[2 * l.Count];
+                for (int i = 0; i < l.Count; i++)
+                    Array.Copy(BitConverter.GetBytes(l[i]), 0, b, i * 2, 2);
+                return b;
+            }
+            else
+            {
+                byte[] b = new byte[2 * l.Count];
+                for (int i = 0; i < l.Count; i++)
+                {
+                    byte[] c = BitConverter.GetBytes(l[i]);
+                    Array.Reverse(c); //uses less memory than c.Reverse() from Linq
+                    Array.Copy(c, 0, b, i * 2, 2);
+                }
+                return b;
+            }
+        }
+
+        static void check(short num)
         {
             try
             {
                 HttpClient hc = new HttpClient();
+                hc.Timeout = new TimeSpan(0, 0, 2); //if you have a REALLY bad internet connection with a REALLY high ping set this higher
                 HttpResponseMessage r = hc.GetAsync(pics + num).Result;
                 byte[] content = r.Content.ReadAsByteArrayAsync().Result;
-                int i = known_sites.FindIndex((s) => arr_equ(s.bytes, content));
+                int i = known_sites.FindIndex((s) => arrequ(s.bytes, content));
                 if (i == -1)
                 {
                     known_sites.Add(new id_site(num, content));
@@ -62,7 +83,7 @@ namespace WebsiteDump
             }
         }
 
-        static bool arr_equ(byte[] left, byte[] right)
+        static bool arrequ(byte[] left, byte[] right)
         {
             if (left.LongLength != right.LongLength)
                 return false;
@@ -77,12 +98,12 @@ namespace WebsiteDump
 
     struct id_site
     {
-        public List<int> ids;
+        public List<short> ids;
         public byte[] bytes;
 
-        public id_site(int id, byte[] bytes)
+        public id_site(short id, byte[] bytes)
         {
-            ids = new List<int>();
+            ids = new List<short>();
             ids.Add(id);
             this.bytes = bytes;
         }
