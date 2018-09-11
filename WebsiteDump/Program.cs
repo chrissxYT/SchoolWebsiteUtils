@@ -2,58 +2,36 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
+using static System.Console;
+using static System.GC;
+using static System.IO.File;
 
 namespace WebsiteDump
 {
     static class Program
     {
         static List<id_site> known_sites = new List<id_site>();
-        static string pics = "https://gymnasium-pegnitz.de/eigene/bildergalerie/show_pictures.php?link=";
-        static string sites = "https://gympeg.de/index.php?id=";
+        static string pics = "https://gymnasium-pegnitz.de/eigene/bildergalerie/show_pictures.php?link={0}";
+        static string sites = "https://gympeg.de/index.php?id={0}";
+        static string pics2 = "https://gympeg.de/assets/images/SlideShow/Gympeg{0}.jpg";
+
+        static readonly int max = 1000; //max checked url int + 1
+        static string formatted_url(short num) //formats the url for checking
+        {
+            return string.Format(pics2, num.ToString("D3"));
+        }
 
         static void Main(string[] args)
         {
-            for (short i = 0; i < 10000; i++)
+            for (short i = 0; i < max; i++)
             {
                 check(i);
             }
-            GC.Collect();
+            Collect();
             foreach (id_site s in known_sites)
             {
-                File.WriteAllBytes(s.ids[0] + ".dat", s.bytes);
-                File.WriteAllBytes(s.ids[0] + ".ids", s.ids.to_byte_array());
-            }
-        }
-
-        static string[] to_string_array<T>(this List<T> l)
-        {
-            string[] s = new string[l.Count];
-            for(int i = 0; i < l.Count; i++)
-            {
-                s[i] = l[i].ToString();
-            }
-            return s;
-        }
-
-        static byte[] to_byte_array(this List<short> l)
-        {
-            if(BitConverter.IsLittleEndian)
-            {
-                byte[] b = new byte[2 * l.Count];
-                for (int i = 0; i < l.Count; i++)
-                    Array.Copy(BitConverter.GetBytes(l[i]), 0, b, i * 2, 2);
-                return b;
-            }
-            else
-            {
-                byte[] b = new byte[2 * l.Count];
-                for (int i = 0; i < l.Count; i++)
-                {
-                    byte[] c = BitConverter.GetBytes(l[i]);
-                    Array.Reverse(c); //uses less memory than c.Reverse() from Linq
-                    Array.Copy(c, 0, b, i * 2, 2);
-                }
-                return b;
+                WriteAllBytes(s.main_id + ".dat", s.content);
+                s.close();
             }
         }
 
@@ -62,23 +40,23 @@ namespace WebsiteDump
             try
             {
                 HttpClient hc = new HttpClient();
-                hc.Timeout = new TimeSpan(0, 0, 2); //if you have a REALLY bad internet connection with a REALLY high ping set this higher
-                HttpResponseMessage r = hc.GetAsync(pics + num).Result;
+                hc.Timeout = new TimeSpan(0, 0, 5); //if you have a REALLY bad internet connection with a REALLY high ping set this higher
+                HttpResponseMessage r = hc.GetAsync(formatted_url(num)).Result;
                 byte[] content = r.Content.ReadAsByteArrayAsync().Result;
-                int i = known_sites.FindIndex((s) => arrequ(s.bytes, content));
+                int i = known_sites.FindIndex((s) => arrequ(s.content, content));
                 if (i == -1)
                 {
                     known_sites.Add(new id_site(num, content));
                 }
                 else
                 {
-                    known_sites[i].ids.Add(num);
+                    known_sites[i].addid(num);
                 }
-                Console.WriteLine(num);
+                WriteLine(num);
             }
             catch(Exception e)
             {
-                Console.WriteLine(num + " has " + e.GetType());
+                WriteLine(num + " has " + e.GetType());
                 check(num);
             }
         }
@@ -87,25 +65,38 @@ namespace WebsiteDump
         {
             if (left.LongLength != right.LongLength)
                 return false;
-            for(long i = 0; i < left.LongLength; i++)
-            {
+            for (long i = 0; i < left.LongLength; i++)
                 if (left[i] != right[i])
                     return false;
-            }
             return true;
         }
     }
 
-    struct id_site
+    class id_site
     {
-        public List<short> ids;
-        public byte[] bytes;
+        public short main_id;
+        Stream s;
+        public byte[] content;
 
         public id_site(short id, byte[] bytes)
         {
-            ids = new List<short>();
-            ids.Add(id);
-            this.bytes = bytes;
+            addid(id);
+            main_id = id;
+            content = bytes;
+            s = Open(id + ".ids", FileMode.Create, FileAccess.Write);
+        }
+
+        public void addid(short id)
+        {
+            s.WriteByte((byte)id);
+            s.WriteByte((byte)(id >> 8));
+        }
+
+        public void close()
+        {
+            s.Close();
+            s = null;
+            content = null;
         }
     }
 }

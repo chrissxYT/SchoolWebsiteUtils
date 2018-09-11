@@ -5,3 +5,10 @@ C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\Web
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.exe
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.pdb
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\bin\x64\Release\WebsiteDump.pdb
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump\obj\x64\Release\WebsiteDump.pdb

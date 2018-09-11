@@ -5,3 +5,10 @@ C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\File
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.csproj.CoreCompileInputs.cache
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.exe
 C:\Users\chrissx\source\repos\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.pdb
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.exe
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\bin\Release\FileIdentifier.pdb
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.exe
+D:\workspace_VS\SchoolWebsiteUtils\FileIdentifier\obj\Release\FileIdentifier.pdb
