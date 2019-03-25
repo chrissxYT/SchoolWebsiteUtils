@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\bin\Release\PictureDump.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\bin\Release\PictureDump.exe
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\bin\Release\PictureDump.pdb
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\obj\Release\PictureDump.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\obj\Release\PictureDump.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\obj\Release\PictureDump.exe
+D:\workspace_VS\SchoolWebsiteUtils\PictureDump\obj\Release\PictureDump.pdb
