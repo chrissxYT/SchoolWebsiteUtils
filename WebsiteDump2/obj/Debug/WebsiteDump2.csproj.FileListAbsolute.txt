@@ -1,0 +1,10 @@
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\WebsiteDump2.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\WebsiteDump2.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\WebsiteDump2.pdb
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\HtmlAgilityPack.dll
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\HtmlAgilityPack.pdb
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\bin\Debug\HtmlAgilityPack.xml
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\obj\Debug\WebsiteDump2.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\obj\Debug\WebsiteDump2.csproj.CopyComplete
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\obj\Debug\WebsiteDump2.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDump2\obj\Debug\WebsiteDump2.pdb

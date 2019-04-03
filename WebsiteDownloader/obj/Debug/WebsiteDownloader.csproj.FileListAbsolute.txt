@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\bin\Debug\WebsiteDownloader.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\bin\Debug\WebsiteDownloader.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\bin\Debug\WebsiteDownloader.pdb
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\obj\Debug\WebsiteDownloader.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\obj\Debug\WebsiteDownloader.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\obj\Debug\WebsiteDownloader.exe
+D:\workspace_VS\SchoolWebsiteUtils\WebsiteDownloader\obj\Debug\WebsiteDownloader.pdb

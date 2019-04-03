@@ -1,0 +1,7 @@
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\bin\Debug\PicDownloader.exe.config
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\bin\Debug\PicDownloader.exe
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\bin\Debug\PicDownloader.pdb
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\obj\Debug\PicDownloader.csprojAssemblyReference.cache
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\obj\Debug\PicDownloader.csproj.CoreCompileInputs.cache
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\obj\Debug\PicDownloader.exe
+D:\workspace_VS\SchoolWebsiteUtils\PicDownloader\obj\Debug\PicDownloader.pdb
